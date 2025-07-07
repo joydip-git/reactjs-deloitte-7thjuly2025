@@ -1,0 +1,108 @@
+s/w and editors required:
+--------------------------------
+Node JS
+VS Code
+
+
+Roadmap:
+--------------------
+JavaScript
+New Features in JS since 2015
+
+TypeScript (optional)
+
+Node JS (basics)
+
+angular/react/vue etc.
+
+
+React JS:
+---------------------
+front-end development
+single page applictaion (SPA)
+open source, JS based library (NOT a framework)
+create an web application through a series of components
+updats DOM (only what is required to be updated) using VDOM mechanism
+uses declarative syntax 
+maintained by Facebook
+it uses JSX (JavaScript XML)
+supports uni-directional data flow
+uses state management (useState -> react hook)
+components are re-usable and entire UI is broken into sevaral such components and nested into each other to create the while UI
+
+2 types of components - class and functional
+MVC style (or MVVM style???)
+
+
+web servers:
+--------------------
+IIS (windows)
+Apache Tomcat
+Nginx
+Vercel
+Amzon EC2...
+
+
+extension	module
+----------------------------
+.aspx		
+.jsp		
+.htm/.html	
+.....
+.xyz		handler for .xyz page request
+
+
+<html>
+	<head>
+	</head>
+	<body>
+	
+		
+	<div>
+		<h2> Welcome to my site</h2>
+	</div>
+	<footer>
+	<h4> Copyright....</42>
+	</footer>		
+		
+	</body>
+</html>
+
+
+app.html		=> <App> or <app-root>
+<div>
+	<Header></...>
+	<Footer></...>
+</div>
+
+welcome.html			=> <Header> or <app-header>
+<h2> Welcome to my site</h2>
+<div>.....
+
+footer.html			=> <Footer> or <app-footer>
+<footer>
+<h4> Copyright....</42>
+</footer>
+
+
+a component => design/template/view (html) + code (js/ts) + styles
+
+
+browser => HTML parser (understands the HTNL tags in the HTML file and render the design in the browser)
+
+page is de-hydrated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
