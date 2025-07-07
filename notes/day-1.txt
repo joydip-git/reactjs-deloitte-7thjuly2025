@@ -58,12 +58,10 @@ extension	module
 	<body>
 	
 		
-	<div>
-		<h2> Welcome to my site</h2>
-	</div>
-	<footer>
-	<h4> Copyright....</42>
-	</footer>		
+	<h2> Welcome to my web app</h2>
+	<br>
+	<butoon>....</button>
+		
 		
 	</body>
 </html>
@@ -88,9 +86,88 @@ footer.html			=> <Footer> or <app-footer>
 a component => design/template/view (html) + code (js/ts) + styles
 
 
-browser => HTML parser (understands the HTNL tags in the HTML file and render the design in the browser)
+browser => HTML parser (understands the HTML tags in the HTML file and render the design in the browser)
 
 page is de-hydrated
+	hydration
+page is hydrated
+
+
+html + js/ts => single file (.jsx/.tsx)
+html (file) + ts (file) =>
+
+
+reactjs-apps
+
+app development server (app server)
+	host the application
+
+live server => hosts the app using a port and loads the content of the web app in the browser
+
+lite-server
+webpack-dev-server etc.
+
+chrome: V8 (C++)
+safari: JS Core (indigo)
+firefox: spidermonkey
+edge: chromium
+opera: chromium
+
+js/ts => module
+-----------------
+function x(){}
+var/let/const a =100
+
+js/ts => module
+---------------
+
+ECMA => version of scripting language features
+ECMAScript => guideline
+
+2015 => ES 6
+...
+2025 => ES 16
+
+module formats:
+
+a. ES module format => export/import
+b. AMD (asynchronous module format)
+b. UMD (Universal module format)
+d. Common JS format (Node JS)
+
+
+module loader => which understands the import/export lines in js/ts files, resolves the dependencies and then loads the files (modules)
+
+requirejs => Does understand ONLY AMD (not anything else)
+if you have written JS modules using ither module format then get those modules converted to AMD format
+
+any browser s/w (chrome) does not have any module loader s/w 
+you have to supply
+
+
+define('',[],function(){
+
+	function call(){}
+})
+
+require('',[],function(){
+	function call(){}
+})
+
+a.js
+function call(){}
+module.exports = {callFn: call}
+
+b.js
+const {call} = require('./a')
+
+
+
+
+
+
+
+
 
 
 
