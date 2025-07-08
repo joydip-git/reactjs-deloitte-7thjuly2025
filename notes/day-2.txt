@@ -88,6 +88,28 @@ class Person{
 
 algorithn: diffing algo to differentiate and understand the difference between the 2 version sof the same VDOM
 
+JSX expressions must have one parent element
+
+<?xml version="1.0">
+<employees>
+	<employee id="1">
+	</employee>
+	<employee id="2">
+	</employee>
+</employees>
+
+
+bundler tool => crate bundle out of app
+browserify, webpack etc.
+
+core webpack installation:
+>npm i webpack webpack-cli
+
+loaders, plugins etc.
+>npm i babel-loader css-loader style-loader html-loader html-webpack-plugin mini-css-extract-plugin clean-webpack-plugin webpack-dev-server -D
+
+
+
 
 
 
