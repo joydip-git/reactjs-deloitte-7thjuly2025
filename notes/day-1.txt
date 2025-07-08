@@ -163,6 +163,18 @@ const {call} = require('./a')
 
 
 
+Immediately Invocable Function Expression (IIFE -> IIFY)
+
+(function(){
+	
+})()
+
+(function(){
+	
+})()
+
+
+
 
 
 

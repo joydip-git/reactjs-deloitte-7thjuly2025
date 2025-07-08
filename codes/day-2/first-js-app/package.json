@@ -1,0 +1,19 @@
+{
+  "name": "first-js-app",
+  "version": "1.0.0",
+  "description": "simple modular JS app",
+  "main": "index.js",
+  "scripts": {},
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "@babel/plugin-transform-modules-amd": "^7.27.1",
+    "@babel/preset-env": "^7.28.0"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}

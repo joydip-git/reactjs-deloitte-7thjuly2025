@@ -1,0 +1,97 @@
+Node JS:
+------------
+Ryan Dahl -> V8
+
+runtime environment for JS
+server-side framework
+
+Common JS format: [default for Node JS]
+export syntax: module.exports = { propName: memberName}
+import syntax: require('module-name')
+
+ES6 module format:
+export syntax: export member
+import syntax: import {member} from 'module-name'
+
+
+AMD format
+UMD format
+systemjs
+etc.
+
+Module loaders:
+---------------------------
+Common JS module loader [part of Node JS runtime]
+require js module loader (AMD)
+systemjs module loader
+
+
+ES6+ version of JS
+
+ES6 -> <ES6 version (vanilla JS) => transpilation (transformation + compilation)
+ES6 module format code -> AMD module format code
+
+tool -> babel
+command to install babel compiler: 
+>npm i @babel/core @babel/cli -D
+
+transformers:
+plugins for every ES6+ feature syntax to be converted to vanilla JS version syntax
+
+preset:
+collection of several plugins
+@babel/preset-env -> all ES6+ transformers
+command: app-dir> npm i @babel/preset-env -D
+
+
+package.json -> list of packages your app is dependent on, as well as other metadata, such as, version, author, license etc.
+command: >npm init --yes
+
+to install package:
+NPM -> Node Package Manager => helps you to install packages etc.
+
+the packages are stored in "node_modules" folder 
+
+global installation: 
+>npm i <pname> --location=global
+path: C:\Users\<user-name>\AppData\Roaming\npm
+
+local installation:
+app-dir>npm i <pname> [-D] //development dependency
+app-dir>npm i <pname> //complete dependency
+
+
+const x = 100 -> var x = 100
+let x = 100 -> var _x = 100
+
+class Person{
+	constructor(name,id,salary){
+		this.name = name
+		this.id = id
+		this.salary = salary
+	}
+	print(){
+		return `${this.name}, ${this.id},...`
+	}
+}
+
+->      function Person(name,id,salary)
+	{
+		this.name = name
+		this.id = id
+		this.salary = salary
+	}
+	Person.prototype.print= function(){
+		return (this.name.concat(this.id)).concat(this.salary)
+	}
+
+
+algorithn: diffing algo to differentiate and understand the difference between the 2 version sof the same VDOM
+
+
+
+
+
+
+
+
