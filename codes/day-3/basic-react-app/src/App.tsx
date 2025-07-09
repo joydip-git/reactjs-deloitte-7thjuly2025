@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import Welcome from './Welcome'
+import Calculator from './Calculator';
 
 function App() {
   console.log('App');
@@ -41,6 +42,7 @@ function App() {
         handlerFn={messageHandler}
       />
       <br />
+      <Calculator />
       {
         //another
       }
