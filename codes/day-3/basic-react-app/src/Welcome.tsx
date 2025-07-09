@@ -8,6 +8,7 @@ type WelcomePropType = {
     handlerFn: (arg: string) => void
 }
 const Welcome = (props: Readonly<WelcomePropType>) => {
+    console.log('wlecome');
     //args.messageValue = ''
     const message = props.messageValue + ' with Vit'
     return (

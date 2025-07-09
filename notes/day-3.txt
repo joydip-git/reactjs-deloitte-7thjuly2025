@@ -39,4 +39,55 @@ function call(a:number, b:number):myType{
 }
 
 
+function useState<T>(initData:T){
+	let data = initData
+	function async updateData(newData:T){
+		data = newData
+	}
+	function async updateData(callback:(oldData:T)=>T){
+		data = callback(data)
+	}
+	return [data,updateData]
+}
+
+const state = useState<string>('welcome')
+const message = state[0]
+const updateMessage = state[1]
+
+const [message,updateMessage]= useState<string>('welcome')
+
+updateMessage('new message')
+
+const numbers =[1,2,3,4]
+const x = numbers[0]
+const y = numbers[1]
+const z = numbers[3]
+
+const [x,y,,z] = numbers
+
+const obj ={ id:1, name: 'anil', salary:1000}
+const id = obj.id/obj['id']
+const salary= obj.salary/obj['salary']
+
+const {id:id, salary:salary} = obj
+const {id, salary} = obj
+
+
+export function add(){}
+
+module.exports = {add:add}
+
+=> { add:add }
+
+import {add} from './'
+
+
+
+
+
+
+
+
+
+
 
