@@ -3,16 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { resolve, join } = require('path')
 
 const webpackConfig = {
-    mode: "development",
-    //entry: resolve(__dirname, 'src', 'index.js'),
-    entry: {
-        index: resolve(__dirname, 'src', 'index.js'),
-        app: resolve(__dirname, 'src', 'components', 'App.js'),
-        appHader: resolve(__dirname, 'src', 'components', 'Header.js'),
-        appButton: resolve(__dirname, 'src', 'components', 'Button.js')
-    },
+    entry: resolve(__dirname, 'src', 'index.js'),
+    // entry: {
+    //     index: resolve(__dirname, 'src', 'index.js'),
+    //     app: resolve(__dirname, 'src', 'components', 'App.js'),
+    //     appHader: resolve(__dirname, 'src', 'components', 'Header.js'),
+    //     appButton: resolve(__dirname, 'src', 'components', 'Button.js')
+    // },
     output: {
-        filename: '[name].bundle.js',
+        //filename: '[name].bundle.js',
+        filename: 'bundle.js',
         path: resolve(__dirname, 'dist')
     },
     resolve: {

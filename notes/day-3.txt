@@ -1,0 +1,42 @@
+code
+packages
+tools
+
+CLI tool:
+create-react-app
+vite
+next js
+
+vite:
+>npm create vite@latest
+
+maintaining the state of data in a parent component (lifting the state up)
+
+prop-types => 3rd party package which helps to define properties for a react component and provides supports for validation of those properties (property checking)
+>npm i prop-types
+
+import as following:
+import PropTypes from 'prop-types'
+
+function Comp{}
+Comp.propTypes={prop1: PropTypes.<data-type>.[isRequired]}
+
+
+string, boolean, number, object, function
+
+undefined, Infinity, NaN, null etc.
+
+any, unknown, ReadOnly, Partial etc.
+
+type myType = boolean|number|string
+type myType={
+	id:number,
+	name:string
+}
+
+function call(a:number, b:number):myType{
+	return undefined
+}
+
+
+
