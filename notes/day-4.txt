@@ -1,0 +1,21 @@
+state and props
+
+mounting
+
+	all react elements have generated the corresponding HTML elements and updated the initial DOM with the dynamically generated DOM for those HTML elements
+
+update
+	if data in any existing react element gets updated immediately the react component of it gets recalled producing the same react element once again but with updated value
+react uses diffing algo to find the difference between previous and new version of VDOM of the same component and then simply updates the corresponding HTML/DOM element in the browser
+
+
+$$typeof
+: 
+Symbol(react.transitional.element)
+
+
+key: null
+props:{children: Array(3)}
+type: "div"
+
+

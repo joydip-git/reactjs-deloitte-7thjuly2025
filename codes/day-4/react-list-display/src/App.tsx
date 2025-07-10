@@ -1,5 +1,6 @@
 import './App.css'
 import Counter from './Counter'
+import Names from './Names'
 
 function App() {
   const message = 'Counter Element'
@@ -13,6 +14,8 @@ function App() {
       <h1>App</h1>
       <br />
       <Counter messageValue={message} />
+      <br />
+      <Names />
     </div >
   )
 }
