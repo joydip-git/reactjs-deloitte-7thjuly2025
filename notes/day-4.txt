@@ -36,6 +36,9 @@ pms-app
 	index.html	
 
 
+display
+Image, Name, price, rating
+
 
 
 
