@@ -28,8 +28,12 @@ pms-app
 		    App.tsx
 		    App.css
 		 products
-		    ProductList.tsx -> import './ProductList.css'
-		    ProductList.css
+			product-list
+		    		ProductList.tsx -> import './ProductList.css'
+		    		ProductList.css
+	         	product-info
+	 		        ProductInfo.tsx
+	 		        ProductInfo.css
 
 	     main.tsx	
 	     index.css
