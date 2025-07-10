@@ -19,3 +19,23 @@ props:{children: Array(3)}
 type: "div"
 
 
+>npm create vue@latest
+
+pms-app
+	src
+	     components
+		 app
+		    App.tsx
+		    App.css
+		 products
+		    ProductList.tsx -> import './ProductList.css'
+		    ProductList.css
+
+	     main.tsx	
+	     index.css
+	index.html	
+
+
+
+
+
