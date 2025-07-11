@@ -6,7 +6,7 @@ const divide = async (a, b) => {
     }
     return res
 }
-
+async function multiply(a, b) { return a * b }
 function add(a, b) { return a + b }
 
 // const divResPromise = divide(12, 3)
@@ -19,6 +19,8 @@ async function callDivide() {
     try {
         const data = await divide(12, 3)
         console.log(data);
+        const d = await multiply(12, data)
+        console.log(d);
     } catch (err) {
         console.log(err)
     } finally {

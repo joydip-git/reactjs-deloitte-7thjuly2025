@@ -16,6 +16,7 @@ const divide = (a, b) => {
 }
 
 function add(a, b) { return a + b }
+async function multiply(a, b) { return a * b }
 
 const divResPromise = divide(12, 0)
 // divResPromise
@@ -24,7 +25,16 @@ const divResPromise = divide(12, 0)
 //         function (err) { console.log(err) }
 //     ).finally()
 divResPromise
-    .then((data) => { console.log(data) })
+    .then((data) => {
+        console.log(data)
+        //call the other async method from here
+        multiply(10, data)
+            .then((d) => {
+                //call the other async method from here
+            })
+            .catch()
+            .finally()
+    })
     .catch((err) => { console.log(err) })
     .finally(() => { console.log('something else') })
 
