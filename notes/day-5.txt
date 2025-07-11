@@ -1,0 +1,14 @@
+HTTP requests:
+----------------------------
+HTTP get/post/put/patch/delete/...
+
+
+Function Execution Context Stack (FECS)
+
+FEC Object
+
+<button onclick='getData()'>
+
+JavaScript API:
+----------------
+Promise API
