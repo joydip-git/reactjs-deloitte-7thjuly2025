@@ -1,0 +1,30 @@
+RESTful API description:
+
+URL					   	HTTP method			data			response
+-----------------------------------------------------------------------------------------------------------------------------------
+get all products
+http://localhost:3000/products			GET			NA		{ "message":"", "data":[{},{},..],"count":20}
+http://localhost:3000/products?limit=1&page=1	GET			limit,page	{ "message":"", "data":[{},{},..],"count":20}
+
+get single product
+http://localhost:3000/products/1			GET			id		{ "message":"", "data": {},"count":1 }
+http://localhost:3000/products/10			GET			id		{ "message":"", "data": null,"count":0 }
+
+add new product
+http://localhost:3000/products			POST			product		{ "message":"", "data":{},"count":1 }
+http://localhost:3000/products			POST			product		{ "message":"", "data": null,"count":0 }
+
+update product
+http://localhost:3000/products/1			PUT			id, product	{ "message":"", "data":{},"count":1 }
+http://localhost:3000/products/10			PUT			id, product	{ "message":"", "data": null,"count":0 }
+
+delete product
+http://localhost:3000/products/1			DELETE			id		{ "message":"", "data":{},"count":1 }
+http://localhost:3000/products/10			DELETE			id		{ "message":"", "data": null,"count":0 }
+
+authentication
+http://127.0.0.1:3003/auth/authenticate 		POST  	{usernane:'', password:''}   { "message":"", "data":sting|null,"count":1/0 }
+
+registration
+http://127.0.0.1:3003/auth/register 			POST   {usernane:'', password:''} 	{ "message":"", "data":{user}|null,"count":1/0 }
+
