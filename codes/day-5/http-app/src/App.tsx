@@ -1,33 +1,41 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Posts from './Posts'
 
 function App() {
+  const [show, setShow] = useState(false)
   const [count, setCount] = useState(0)
+  const [countX, setCountX] = useState(0)
 
+  const showHandler = () => {
+    setShow(
+      (oldShow) => {
+        return !oldShow
+      }
+    )
+  }
+  const countHandler = () => {
+    setCount(oldCount => { return oldCount + 1 })
+  }
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      CountX: &nbsp;<span>{countX}</span>
+      <br />
+
+      <button type='button' onClick={() => setCountX(c => c + 1)}>IncreaseX</button>
+      <br />
+      <button type='button' onClick={countHandler}>Increase</button>
+      <br />
+      <button type='button' onClick={showHandler}>{show ? 'Hide' : 'Show'}</button>
+      {
+        show && (
+          <div>
+            <h2>List of Posts</h2>
+            <br />
+            <Posts countData={count} />
+          </div>
+        )
+      }
     </>
   )
 }

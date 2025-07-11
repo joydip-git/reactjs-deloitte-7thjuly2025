@@ -12,3 +12,120 @@ FEC Object
 JavaScript API:
 ----------------
 Promise API
+
+new Promise()
+
+
+Person <- doDivide()
+
+       <- putOnDesk()
+       <- sendMeText()
+
+success
+failure
+
+Axios => 3rd party api
+>npm i axios
+
+effect hook:
+------------------
+useEffect(
+	()=>{
+		fetchPosts()
+	}
+)
+
+side-effect causing code:
+------------------------------------
+fetching data async
+websocket
+data
+
+initial phase -> mounting phase
+	fecth data -> data received -> update state
+force the app to update the already mounted component -> update phase
+
+a. a compoent's own state is updated
+b. a component receives fresh props from the parent (because the parent component state got updated)
+
+1. the effect code is executed every time the component is recalled/rendered
+and the cleanup code will be executed except the first time, i.e. next cycle onwards but first and then again the effect code
+useEffect(
+	()=>{
+		//effect code
+		return ()=>{ //cleanup code}
+	}
+)
+
+2. the effect code is executed every time if any value in the dependency list is changed including the first time and the cleanup code will be executed executed every time if any value in the dependency list is changed, except the first time, i.e. next cycle onwards but first and then again the effect code
+useEffect(
+	()=>{
+		//effect code
+
+		return ()=>{ //cleanup code}
+	},[dependencies]
+)
+
+PostInfo => props:{postId:number}
+
+useEffect(
+()=>{
+	getPost(props.postId)
+},[props.postId])
+
+3. the effect code is executed ONLY one time just after mounting phase and the cleanup code will be executed ONLY if the component is unmounted
+useEffect(
+	()=>{
+		//effect code
+
+		return ()=>{ //cleanup code}
+	},[]
+)
+
+//closure
+let m = 100
+function callCallback(fn){
+	this.x=100
+	let a =10
+	let x
+	x = fn()
+	const cleanUp = function(){
+		x=0
+	}
+	return cleanUp
+}
+
+function assign(){ return 10}
+const returnFn = callCallback(fetchData)
+returnFn()
+
+closure => a lexical environment for any function in JS containing the variables of the outer scopes (outer function)
+
+useRef() and useCllback()
+https://jsonplaceholder.typicode.com/posts?_limit=10&_page=1
+
+
+const [x,setX] = useState()
+
+useEffect(
+()=>{
+	
+},[state.id])
+
+setState({...oldstate,...newData})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

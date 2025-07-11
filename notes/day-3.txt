@@ -50,13 +50,13 @@ function useState<T>(initData:T){
 	return [data,updateData]
 }
 
-const state = useState<string>('welcome')
+const state = useState<{id:number,salary:number,name:string}>({id:0, salary:0, name:''})
 const message = state[0]
 const updateMessage = state[1]
 
 const [message,updateMessage]= useState<string>('welcome')
 
-updateMessage('new message')
+updateMessage({id:0, salary:0})
 
 const numbers =[1,2,3,4]
 const x = numbers[0]
