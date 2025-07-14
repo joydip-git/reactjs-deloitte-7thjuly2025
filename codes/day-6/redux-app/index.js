@@ -1,5 +1,5 @@
-import { legacy_createStore, combineReducers } from "redux";
-
+const { legacy_createStore, combineReducers, applyMiddleware } = require("redux");
+const { createLogger } = require("redux-logger");
 //states
 const initialCounterState = {
     counter: 0
@@ -109,26 +109,30 @@ const rootReducer = combineReducers({
     counterState: counterReducer,
     taskState: taskRedcuer
 })
-const store = legacy_createStore(rootReducer)
+const loggerMiddleware = createLogger()
+const store = legacy_createStore(rootReducer, applyMiddleware(loggerMiddleware))
+
+const wholeState = store.getState();
+//wholeState
 
 
 //dispatching
-console.log(store.getState());
+//console.log(store.getState());
 const increaseByTwoAction = increaseCounterActionCreator(2)
 store.dispatch(increaseByTwoAction)
-console.log(store.getState());
+//console.log(store.getState());
 
 const decreaseByOneAction = decreaseCounterActionCreator(1)
 store.dispatch(decreaseByOneAction)
-console.log(store.getState());
+//console.log(store.getState());
 
 
 for (let index = 0; index < 2; index++) {
     const addTaskAction = addTaskActionCreator({ id: index + 1, title: 'learn redux' })
     store.dispatch(addTaskAction)
-    console.log(store.getState().taskState);
+    //console.log(store.getState().taskState);
 }
 
 const deleteTaskAction = deleteTaskActionCreator(2)
 store.dispatch(deleteTaskAction)
-console.log(store.getState().taskState);
+//console.log(store.getState().taskState);

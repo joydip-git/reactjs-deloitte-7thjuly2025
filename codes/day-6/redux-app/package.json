@@ -12,5 +12,8 @@
   "dependencies": {
     "redux": "^5.0.1"
   },
-  "type": "module"
+  "type": "commonjs",
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
+  }
 }

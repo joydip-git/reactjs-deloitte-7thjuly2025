@@ -9,3 +9,38 @@ passing data between components
 		iv. preditable way of maintaining and updating a common state
 		v. data flows from that storage to the subscribed components
 		vi. the updation should be synchronous
+
+flux -> redux
+
+	store ->   object where state(s) are maintained
+	state ->   state of data
+	reducer -> function(s) where each function is responsible for state updation and the reducer function must return a new state after state updation
+	reducre map -> object with properties, where each property refers to a reducre function
+	dispatch -> a method provided by the store to the component(s), so that subscribed component(s) can "send" request (action) to update state and avail the new state data
+	action -> object, the "request" sent by the component to update the state
+
+
+
+useReducer()
+state management and handler for state management out of component => useReducer()
+
+useState => useReducer
+RxJS
+
+few components should have state
+state should NOT be always be lifted up, just that you can share data across different components
+	=> 100 -> 5/6
+	=> App -> 
+
+stateful and stateless
+
+
+
+
+
+
+
+
+
+
+
