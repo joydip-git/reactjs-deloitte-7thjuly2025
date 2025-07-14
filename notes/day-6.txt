@@ -1,0 +1,11 @@
+passing data between components
+
+	a. immediately nested components -> props
+	b. deeply nested components -> context object
+	c. the components are not in the same tree and you are NOT using "lift the state up" -> application-wide state management (components will manage the state)
+		i. ONLY one source of data
+		ii. components which nedd that date will subscribe to the source of data
+		iii. when the source of data is updated, every subscribed component will be notified
+		iv. preditable way of maintaining and updating a common state
+		v. data flows from that storage to the subscribed components
+		vi. the updation should be synchronous

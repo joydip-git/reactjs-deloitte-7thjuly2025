@@ -40,9 +40,9 @@ function call(a:number, b:number):myType{
 
 
 function useState<T>(initData:T){
-	let data = initData
+	let data = initData //{id:0, salary:0, name:''}
 	function async updateData(newData:T){
-		data = newData
+		data = newData//{id:0, salary:0, name:''}
 	}
 	function async updateData(callback:(oldData:T)=>T){
 		data = callback(data)
@@ -56,7 +56,9 @@ const updateMessage = state[1]
 
 const [message,updateMessage]= useState<string>('welcome')
 
-updateMessage({id:0, salary:0})
+updateMessage((oldData)=>{return {...oldData, id:0, salary:0}})
+
+{name}
 
 const numbers =[1,2,3,4]
 const x = numbers[0]
