@@ -18,4 +18,10 @@ note: depending on the async function execution using promise api, the thunk act
 3. add extra reducers by using 'extraReduxers' property in the createSlice method argument object
 4. call this callback creatro from component and dispatch the callback function received as return type from the asynccallbackcreator method
 
+IntersectionObserver
+
+
+will display 10 records at a time => send GET request for posts with _limit=10 and _page=1
+when scrollbar is dragged down and you reach the end of the posts (last post) start fetching next 10 records with _limit=10 and _page=2
+stop fetching data if there are no more records at the backend
 

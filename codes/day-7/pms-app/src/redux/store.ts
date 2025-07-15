@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { productsReducer } from "./productsreducer";
 import { createLogger } from "redux-logger";
+import { productReducer } from "./productreducer";
 
 const rootReducer = combineReducers({
-    productsState: productsReducer
+    productsState: productsReducer,
+    productState: productReducer
 })
 const logger = createLogger()
 const AppStore = configureStore({
