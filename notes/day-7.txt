@@ -1,0 +1,21 @@
+redux
+	any subscriber must dispatch an action object against the store (with type property and an optional data)
+	note: a subsciber can optionally dispatch a callback function instead of an action against the store
+
+dispatch -> fetchProducts -> store
+
+
+redux-thunk -> middleware and its job is to accept a async callback function dispatched against the store and perform the operation asynchronously and then dispatch actions against the store itself, of which it is part of
+
+>npm i redux-thunk
+
+1. create an async function (fetchProducts)
+2. create async thunk callback creator by calling createAsyncThunk() method and pass a string as the main action type (should include the name of the 'slice' and append a suffix after that
+note: depending on the async function execution using promise api, the thunk action will have 3 states: pending, fulfilled and rejected. hence the action type names will be
+	- pending state: '<name-of-the-slice/suffix/pending>'
+	- fulfilled state: '<name-of-the-slice/suffix/fulfilled>'
+	- rejected state: '<name-of-the-slice/suffix/rejected>'
+3. add extra reducers by using 'extraReduxers' property in the createSlice method argument object
+4. call this callback creatro from component and dispatch the callback function received as return type from the asynccallbackcreator method
+
+
