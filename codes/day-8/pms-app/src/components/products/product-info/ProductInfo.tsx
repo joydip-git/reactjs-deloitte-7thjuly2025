@@ -1,6 +1,7 @@
 import type { Product } from "../../../models/product"
 import Star from "../../shared/star/Star"
 import './ProductInfo.css'
+import { Link } from "react-router-dom";
 
 type ProductInfoProps = {
     product: Product
@@ -11,7 +12,9 @@ const ProductInfo = (props: Readonly<ProductInfoProps>) => {
     return (
         <tr>
             <td>
-                <img src={product.imageUrl} alt="NA" title={product.productName} className="img-style" />
+                <Link to={`/products/view/${product.productId}`}>
+                    <img src={product.imageUrl} alt="NA" title={product.productName} className="img-style" />
+                </Link>
             </td>
             <td>{product.productName}</td>
             <td>{product.price}</td>

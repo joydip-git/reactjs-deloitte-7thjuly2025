@@ -1,11 +1,17 @@
-import ProductList from '../products/product-list/ProductList'
+import { Outlet } from 'react-router-dom'
+import AppRoutes from '../../routes/AppRoutes'
 import './App.css'
+import DashBoard from '../shared/dashboard/DashBoard'
 
 function App() {
   return (
-    <div className='container container-fluid margin-style'>
-      <ProductList />
-    </div>
+    <>
+      <DashBoard />
+      <div className='container container-fluid margin-style'>
+        <AppRoutes />
+        <Outlet />
+      </div>
+    </>
   )
 }
 

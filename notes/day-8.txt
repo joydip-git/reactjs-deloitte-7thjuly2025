@@ -47,7 +47,54 @@ const App = fowardRef((props:any, ref:any)=>{
 })
 
 Routing:
-----------------------
+-------------------------------------
+routing in react app (client-side) => 
+	single page
+
+DashBoard
+
+http://localhost:4200/home	=> Home
+http://localhost:4200/		=> Home
+
+
+http://localhost:4200/products 			=> ProductList (collection of ProductInfo)
+http://localhost:4200/products/view/{id}        => ProductDetail (display details of product with product id: {id})
+
+http://localhost:4200/products/edit/{id}        => UpdateProduct (edit details of product with product id: {id})
+http://localhost:4200/products/add 		=> AddProduct
+
+
+inlvalid url					=> PageNotFound
+
+route => path and component lazy/eager
+
+router engine => 
+	looks up to the browser and reads the url (path)
+	write the url in the browser
+
+react-router-dom react-router
+
+HashRouter	=> 
+BrowserRouter	=> 
+
+MemoryRouter	=> React Native, testing
+
+http://asmasx.com/vist/#/
+
+history api, location and params
+pushState()	
+
+{
+  id:'100',
+  x:'101'	
+}
+
+{
+  id:'100',
+  x:'101'	
+}
+
+
 
 
 
