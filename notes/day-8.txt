@@ -68,31 +68,45 @@ inlvalid url					=> PageNotFound
 
 route => path and component lazy/eager
 
+
+react-router-dom and react-router (added transitively when the former is added)
+
 router engine => 
 	looks up to the browser and reads the url (path)
 	write the url in the browser
 
-react-router-dom react-router
+routers -> 
+	a. HashRouter => older browsers where information is stored as part of #
+	b. BrowserRouter => for modern browsers, takes advantage of history api
+	c. MemoryRouter	=> React Native, testing
 
-HashRouter	=> 
-BrowserRouter	=> 
+hooks -> 
+	useParams() => returns a read-only object with route parameters matching to the route that is currently active, containig all route parameters and their values as key/value pairs
 
-MemoryRouter	=> React Native, testing
+	useNavigate() => returns a callback function which can be called to programmatically navigate to an url (equivalent to pushing the navigation url and data in the browser's history using history api)
 
-http://asmasx.com/vist/#/
+	useRouter() => hook equivalent of <Routes> element to group different routes and even their children routes. Each route here is a RouteObject type (equivalent to <Route> component)
+
+other components ->
+	Link -> helps you navigate to an url (supply the nagigation url to "to" property of it) and additionally suppresses the default behavior of reloading the application of anchor element, submit button of form etc., which causes a request to be sent to the server and then bring a new page and then reload the application to render it
+
 
 history api, location and params
 pushState()	
 
 {
-  id:'100',
-  x:'101'	
+  id:'100'	
 }
 
 {
   id:'100',
   x:'101'	
 }
+
+
+anchor -> navigate to 
+
+
 
 
 

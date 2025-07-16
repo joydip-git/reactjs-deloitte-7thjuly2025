@@ -1,6 +1,6 @@
 import { lazy, Suspense, type FC } from "react"
-import { Navigate, Routes, Route } from "react-router-dom"
-//import { useRoutes, type RouteObject } from "react-router-dom"
+//import { Navigate, Routes, Route } from "react-router-dom"
+import { Navigate, useRoutes, type RouteObject } from "react-router-dom"
 
 const AddProduct = lazy(() => import("../components/products/add-product/AddProduct"))
 const ProductDetail = lazy(() => import("../components/products/product-detail/ProductDetail"))
@@ -13,47 +13,47 @@ const FallBackDesign: FC = () => {
     return <span>Loading...please wait</span>
 }
 
-// const AppRoutes = () => {
+const AppRoutes = () => {
 
-//     const mainRoutes: RouteObject = {
-//         path: '/',
-//         children: [
-//             { path: '404', element: <PageNotFound /> },
-//             { path: 'home', element: <Home /> },
-//             { path: '', element: <Navigate to={'/home'} /> },
-//             { path: '*', element: <Navigate to={'/404'} /> }
-//         ]
-//     }
+    const mainRoutes: RouteObject = {
+        path: '/',
+        children: [
+            { path: '404', element: <PageNotFound /> },
+            { path: 'home', element: <Home /> },
+            { path: '', element: <Navigate to={'/home'} /> },
+            { path: '*', element: <Navigate to={'/404'} /> }
+        ]
+    }
 
-//     const productRoutes: RouteObject = {
-//         path: 'products',
-//         children: [
-//             {
-//                 path: '', element: <ProductList />
-//             },
-//             {
-//                 path: 'add', element: <AddProduct />
-//             },
-//             {
-//                 path: 'view/:id', element: <ProductDetail />
-//             },
-//             {
-//                 path: 'edit/:id', element: <UpdateProduct />
-//             }
-//         ]
-//     }
+    const productRoutes: RouteObject = {
+        path: 'products',
+        children: [
+            {
+                path: '', element: <ProductList />
+            },
+            {
+                path: 'add', element: <AddProduct />
+            },
+            {
+                path: 'view/:id', element: <ProductDetail />
+            },
+            {
+                path: 'edit/:id', element: <UpdateProduct />
+            }
+        ]
+    }
 
-//     const allRoutes = useRoutes([productRoutes, mainRoutes])
-//     return (
-//         <>
-//             <Suspense fallback={<FallBackDesign />}>
-//                 {allRoutes}
-//             </Suspense>
-//         </>
-//     )
-// }
+    const allRoutes = useRoutes([productRoutes, mainRoutes])
+    return (
+        <>
+            <Suspense fallback={<FallBackDesign />}>
+                {allRoutes}
+            </Suspense>
+        </>
+    )
+}
 
-
+/*
 const AppRoutes = () => {
 
     return (
@@ -74,5 +74,7 @@ const AppRoutes = () => {
             </Routes>
         </Suspense>
     )
+   
 }
+     */
 export default AppRoutes
