@@ -1,0 +1,56 @@
+ <Form
+        inputHandler={handleFormInput}
+        validationHandler={validate}
+        show={showError}
+	ref={inputElementRef}
+      />
+
+Form({inputHandler:handleFormInput,validationHandler:validate,show:showError})
+
+forwardRef({inputHandler:handleFormInput,validationHandler:validate,show:showError},ref:RefObject)
+
+
+Form({inputHandler:handleFormInput,validationHandler:validate,show:showError},ref:ForwardedRef)
+
+forwardRef(), memo(), connect() etc. => Higher Order Component (design pattern)
+
+forwardRef(component:Component, ref:any){ 
+  return <Inner {...component} ref={ref}/>
+}
+
+component enhanced somehow => enhanced component (Exotic)
+
+class and functional => functional
+hooks
+
+
+class App extends Component{
+	state={
+		counter:0,
+		posts:[]
+	}
+	render(){
+		return <></>
+	}
+}
+
+const app = new App() => App component instance created
+
+app.ref, props, state, key etc.
+app.render() => returns React element (vdom)
+
+
+<App ref={}/>
+
+const App = fowardRef((props:any, ref:any)=>{
+	return <li ref={ref}></>
+})
+
+Routing:
+----------------------
+
+
+
+
+
+

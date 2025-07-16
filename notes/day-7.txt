@@ -25,3 +25,13 @@ will display 10 records at a time => send GET request for posts with _limit=10 a
 when scrollbar is dragged down and you reach the end of the posts (last post) start fetching next 10 records with _limit=10 and _page=2
 stop fetching data if there are no more records at the backend
 
+reference of HTML DOM element which is displaying the last record
+an IntersectionObserver to hold the reference of the element
+(the IO holding reference to HTML DOM element will keep changing over time)
+
+
+
+
+
+
+

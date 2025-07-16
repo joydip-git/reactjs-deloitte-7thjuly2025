@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from "react"
 import usePostsInfiniteScroll from "./usePostsInfiniteScroll"
+import PostInfo from "./PostInfo"
 
 const Posts = () => {
 
@@ -52,16 +53,10 @@ const Posts = () => {
                                     if (posts.length === index + 1)
                                         // return <li ref={lastLiRef} key={p.id}>{p.id}# &nbsp;&nbsp;{p.title}</li>
                                         return (
-                                            <li ref={lastLiElementRef} key={p.id}>
-                                                <h3>{p.id}# &nbsp;&nbsp;{p.title}</h3>
-                                            </li>
+                                            <PostInfo post={p} key={p.id} />
                                         )
                                     else
-                                        return (
-                                            <li key={p.id}>
-                                                <h3>{p.id}# &nbsp;&nbsp;{p.title}</h3>
-                                            </li>
-                                        )
+                                        return <PostInfo post={p} key={p.id} />
                                 })
                     }
                 </ul>
