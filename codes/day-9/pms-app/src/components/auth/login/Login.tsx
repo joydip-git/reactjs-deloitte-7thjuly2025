@@ -1,10 +1,13 @@
 import { useState, type FormEvent } from "react"
 import { authenticate } from "../../../services/authservice"
 import type { User } from "../../../models/user"
-import { saveToken } from "../../../services/tokenservice"
+//import { saveToken } from "../../../services/tokenservice"
 import { useNavigate, useSearchParams } from "react-router-dom"
+import TokenStorage from "../../../services/tokenservice"
 
 const Login = () => {
+
+    const tokenStore = TokenStorage.instantiate()
 
     const [queryParams, setQueryParams] = useSearchParams()
     const navigateTo = useNavigate()
@@ -19,7 +22,8 @@ const Login = () => {
             const response = await authenticate(user)
             const apiResponse = response.data
             if (apiResponse.data) {
-                saveToken(apiResponse.data)
+                //saveToken(apiResponse.data)
+                tokenStore.saveToken(apiResponse.data)
                 const url = queryParams.get('redirectUrl')
                 if (url)
                     navigateTo(`/${url}`)

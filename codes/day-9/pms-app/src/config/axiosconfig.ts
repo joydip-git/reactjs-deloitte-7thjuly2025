@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getToken } from "../services/tokenservice";
+import TokenStorage from "../services/tokenservice";
 
 const axiosInstance = axios.create({
     headers: {
@@ -12,7 +12,8 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
     (reqConfig) => {
-        reqConfig.headers.Authorization = `Bearer ${getToken()}`
+
+        reqConfig.headers.Authorization = `Bearer ${TokenStorage.instantiate().getToken()}`
         return reqConfig
     },
     (err) => {

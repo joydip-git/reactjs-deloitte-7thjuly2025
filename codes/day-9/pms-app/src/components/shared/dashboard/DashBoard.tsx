@@ -1,6 +1,32 @@
 import { Link } from "react-router-dom"
+import TokenStorage from "../../../services/tokenservice"
+import { useEffect, useState } from "react"
+import type { Subscription } from "rxjs"
 
 const DashBoard = () => {
+    const tokenStore = TokenStorage.instantiate()
+    const [isLogged, setIsLogged] = useState<boolean>(false)
+
+    useEffect(
+        () => {
+            const sub: Subscription = tokenStore
+                .tokenObservable
+                .subscribe({
+                    next: (token) => {
+                        if (token)
+                            setIsLogged(true)
+                        else
+                            setIsLogged(false)
+                    },
+                    error: (err) => console.log(err)
+                })
+
+            return () => {
+                sub.unsubscribe()
+            }
+        }, []
+    )
+
     return (
         <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div className="container-fluid">
@@ -32,10 +58,19 @@ const DashBoard = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/auth/login'>
-                                <button className="nav-link">
-                                    Login
-                                </button>
+                            <Link to='/auth/login' onClick={() => tokenStore.removeToken()}>
+                                {
+                                    isLogged ? (
+                                        <button className="nav-link">
+                                            Logout
+                                        </button>
+
+                                    ) : (
+                                        <button className="nav-link">
+                                            Login
+                                        </button>
+                                    )
+                                }
                             </Link>
                         </li>
                     </ul>

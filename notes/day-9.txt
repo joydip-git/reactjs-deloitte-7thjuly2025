@@ -1,3 +1,42 @@
 axios
 	=> static
+		-> get, post, put etc.
 	=> instance
+
+
+login?redirect=products
+
+<App>
+	<DB/>
+	br
+	<ProductLayout>
+		<outlet>
+			<Login/>
+		<..>
+	<...>
+</App
+
+Reactive Extensions (reactivex.io)
+Reactive Extensions to JavaScript (rxjs.dev)
+
+Promise => delegates the taks to be executed async way to the environment (node or brwoser) and also stores the result of the operation
+.then((data)=>{}, ()=>{})
+
+storage:
+Observable -> stores data of an aync operation
+
+Subject			->
+BehaviorSubject		->
+ReplaySubject		-> 
+
+operators: useful functions
+	of, filter, map etc.
+
+
+
+
+
+
+
+
+
