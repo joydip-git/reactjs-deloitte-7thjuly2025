@@ -32,6 +32,23 @@ React compatible Media Player Library which supports HLS or DASH
 for Video.js
 command:>npm i video.js
 public\videos\785cef4d-f615-4baa-9853-1891bc1eb235
+
+websocket =>
+
+	http 
+
+WebSocket API
+	additionally handle
+		a. authentication and authorization
+		b. robust disconnect detection 
+		c. seamless automatic connection
+		d. recover missed messages
+
+	ws library => npm i ws
+	socket.io library => npm i socket.io-client (front-end)
+
+
+
 	
 	
 
