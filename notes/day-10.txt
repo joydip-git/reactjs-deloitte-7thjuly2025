@@ -3,4 +3,37 @@
 3. socket
 4. chatbot - css
 
+ABR
+
+for ABR a video file woth extension such as .mp4 or .mov or any other format must be converted to HLS type video	
+
+s/w to do that kind of conversion => ffmpeg
+	
+install ffmpeg using chocolatey => 
+command: >choco install ffmpeg
+path: C:\ProgramData\chocolatey\lib\ffmpeg\tools\ffmpeg\bin
+set this path in "path" environment variable
+
+manifest file: for HLS manifest file extension is *m3u8, for DASH manifest file extension is MPD
+lists different resolution files
+segments: multiple versions at different resolution and with different bit rate
+
+protocols:
+	HLS => HTTP Live Streaming
+	DASH => Dynamic Adaptive Streaming over HTTP
+
+React compatible Media Player Library which supports HLS or DASH
+
+	Video.js: provides support for HLS/DASH via plugins
+	hls.js/dash.js: direct library 
+	React Player: component which wraps various players
+	Ply: HTML5 media player
+
+for Video.js
+command:>npm i video.js
+public\videos\785cef4d-f615-4baa-9853-1891bc1eb235
+	
+	
+
+	
 

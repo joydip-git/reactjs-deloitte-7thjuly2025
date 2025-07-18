@@ -3,10 +3,26 @@ import { type AxiosProgressEvent } from "axios";
 
 const uploadFile = (file: File, onUpload: (e: AxiosProgressEvent) => void) => {
     const formdata = new FormData()
-    formdata.append('newFile', file)
+
+    //for file upload backend
+    //formdata.append('newFile', file)
+    // return axiosInstance
+    //     .post(
+    //         '/upload-file',
+    //         formdata,
+    //         {
+    //             headers: {
+    //                 "Content-type": "multipart/form-data",
+    //             },
+    //             onUploadProgress: onUpload
+    //         }
+    //     )
+
+    //for video file upload abrs backend server
+    formdata.append('video', file)
     return axiosInstance
         .post(
-            '/upload-file',
+            '/upload',
             formdata,
             {
                 headers: {
