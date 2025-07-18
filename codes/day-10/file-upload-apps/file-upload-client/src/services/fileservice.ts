@@ -4,7 +4,7 @@ import { type AxiosProgressEvent } from "axios";
 const uploadFile = (file: File, onUpload: (e: AxiosProgressEvent) => void) => {
     const formdata = new FormData()
     formdata.append('newFile', file)
-    axiosInstance
+    return axiosInstance
         .post(
             '/upload-file',
             formdata,
