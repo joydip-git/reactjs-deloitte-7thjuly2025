@@ -46,6 +46,7 @@ WebSocket API
 
 	ws library => npm i ws
 	socket.io library => npm i socket.io-client (front-end)
+	useWebSocket hook from 'react-use-websocket' library
 
 
 
